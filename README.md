@@ -5,12 +5,12 @@ It involves creating an API to obtain information from a database containing an 
 
 The following is only in relation to the sample dataset used:
 
-The id represents the id of the listing and is unique. 
-The location represents the coordinates of the user that listed the purchase.
-The userId is the id unique to the user that listed the purchase. There can be multiple userIds in the database.
-The description is a description of the item/sale and does not need to be filled. It can be null.
-The price is the price the item was listed at. If there is no price, the number is -1
-The status of items can be either "tos" or "removed".
+The id represents the id of the listing and is unique. It is a string involving numbers and letters.
+The location represents the coordinates of the user that listed the purchase. It is stored as a string of list of floats so that sqllite can handle it.
+The userId is the id unique to the user that listed the purchase. There can be multiple userIds in the database. It is a string involving numbers and letters.
+The description is a description of the item/sale and does not need to be filled. It can be null. It is a string.
+The price is the price the item was listed at. If there is no price, the number is -1. It is a float.
+The status of items can be either "tos" or "removed". It is a string.
 
 The possible searches for the API are as follows:
 getsorteddata?reverse=True&criteria=price - The items will be ordered by the criteria. If reverse is True then it is in descending order and ascending order if False. The default is False. 
