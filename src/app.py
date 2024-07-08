@@ -8,7 +8,7 @@ import json
 Base = declarative_base()
 app = FastAPI()
 
-with open('item_data.json', 'r') as f:
+with open('../data/item_data.json', 'r') as f:
     data = json.load(f)
 
 class Items(Base):
@@ -164,6 +164,9 @@ def get_items_in_radius(db: session = Depends(get_db),
                                                 func.pow((Items.lat-latitude), 2)
                                              ) <= radius
                                     ).all()
+    if len(output) == 0:
+        return "No items listed have a location within that radius."
+
     return format_all(output)
 
 if __name__ == "__main__":
