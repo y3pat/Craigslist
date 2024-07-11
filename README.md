@@ -23,3 +23,14 @@ getitemslist?status=AAsm - obtains list of items with specified status
 getitemslist?userid=AAsm - obtains list of items listed by specified userId
 
 get_items_in_radius?radius=xy&latitude=xx&longitude=yy - returns array of all items listed in the location by coordinate.
+
+## FOR THE FOLLOWING:
+ (assume " " quotations just represent the command that is inputted into the terminal but ' ' means quotes to input in the command)
+
+#### Before beginning, if you plan on using the json attached you must put "alembic upgrade +1"
+#### or "alembic upgrade head" into the terminal to create the item data table. This
+
+
+#### Then, you must put "python -m 'migrations.insert_itemdata'"
+
+#### all of this is assuming commands are performed in Craigslist directory

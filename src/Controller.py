@@ -1,13 +1,9 @@
 from sqlalchemy.orm import Session
-from DAO import ItemsDAO
+from .DAO import ItemsDAO
 
 class ItemsController:
     def __init__(self, db: Session):
         self.dao = ItemsDAO(db)
-
-    def insert_initial_values(self):
-        self.dao.insert_all_items()
-
     def all_data(self):
         return self.dao.get_all_items()
 

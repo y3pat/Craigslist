@@ -1,8 +1,8 @@
 from sqlalchemy import Column, String, Float, Text, REAL
 from sqlalchemy.orm import declarative_base
 
-
 Base = declarative_base()
+
 
 class Items(Base):
     __tablename__ = "itemdata"
@@ -13,3 +13,5 @@ class Items(Base):
     description = Column(String, nullable=True)
     price = Column(Float, index=True)
     status = Column(String, nullable=True)
+
+
