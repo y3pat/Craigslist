@@ -19,11 +19,11 @@ session.close()
 # all of this must be performed in directory Craigslist
 
 @app.get('/')
-def server_online():
+async def server_online():
     return {'status': True}
 
 @app.get('/alldata')
-def show_all_data(db: session = Depends(get_db)):
+async def show_all_data(db: session = Depends(get_db)):
     controller = ItemsController(db)
     return format_items(controller.all_data())
 
@@ -91,7 +91,7 @@ async def getitemslist(db: session = Depends(get_db), status: Optional[str] = No
 
 
 @app.get('/get items in radius')
-def get_items_in_radius(db: session = Depends(get_db),
+async def get_items_in_radius(db: session = Depends(get_db),
                         radius: Optional[float] = 0.0,
                         longitude: Optional[float] = 100.0,
                         latitude: Optional[float] = 100.0):
