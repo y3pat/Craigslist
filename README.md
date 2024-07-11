@@ -27,6 +27,8 @@ get_items_in_radius?radius=xy&latitude=xx&longitude=yy - returns array of all it
 ## FOR THE FOLLOWING:
  (assume " " quotations just represent the command that is inputted into the terminal but ' ' means quotes to input in the command)
 
+
+### Remember to install all requirements through "pip install -r 'requirements.txt'"
 #### Before beginning, if you plan on using the json attached you must put "alembic upgrade +1"
 #### or "alembic upgrade head" into the terminal to create the item data table. This
 
